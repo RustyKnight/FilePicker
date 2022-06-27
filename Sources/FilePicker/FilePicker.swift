@@ -84,7 +84,7 @@ public struct FilePicker<LabelView: View>: View {
                 let panel = NSOpenPanel()
                 panel.allowsMultipleSelection = allowMultiple
 							  panel.canChooseDirectories = types.contains(.folder)
-                panel.canChooseFiles = true
+                panel.canChooseFiles = !types.contains(.folder)
                 panel.allowedFileTypes = types.map { $0.identifier }
                 panel.begin { reponse in
                     if reponse == .OK {
