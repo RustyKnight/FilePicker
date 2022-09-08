@@ -54,7 +54,6 @@ public struct FilePicker<LabelView: View>: View {
 		self.allowMultiple = allowMultiple
 		self.pickedCompletionHandler = completionHandler
 		self.labelViewContent = labelViewContent
-		self.startingDirectory = nil
 	}
 #endif
 	
